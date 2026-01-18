@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Veer The Muscle Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  color:#fff;
+  background:#000;
+}
+
+/* ===== BACKGROUND ===== */
+.page-bg{
+  background:url("hero.jpg") center/cover fixed no-repeat;
+  position:relative;
+  min-height:100vh;
+}
+.page-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.78);
+}
+.page-content{
+  position:relative;
+  z-index:2;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo img{
+  height:65px;
+}
+.logo span{
+  font-size:26px;
+  font-weight:700;
+  color:#e10600;
+  text-transform:uppercase;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+nav a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  padding:10px 22px;
+  border-radius:30px;
+  background:#e10600;
+  transition:.3s;
+}
+nav a:hover{
+  background:#fff;
+  color:#e10600;
+}
+
+/* ===== MAIN CONTENT ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h1{
+  text-align:center;
+  font-size:42px;
+  color:#e10600;
+  margin-bottom:40px;
+}
+
+.section{
+  margin-bottom:70px;
+}
+
+.highlight{
+  background:rgba(17,17,17,.85);
+  border-left:5px solid #e10600;
+  padding:25px;
+  border-radius:12px;
+}
+
+p{
+  color:#ddd;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+ul{
+  list-style:none;
+}
+ul li{
+  padding-left:25px;
+  margin-bottom:10px;
+  position:relative;
+}
+ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#e10600;
+}
+
+/* ===== OWNER SECTION ===== */
+.owner-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.owner-images{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.owner-images img{
+  width:100%;
+  border-radius:16px;
+  border:3px solid #e10600;
+  box-shadow:0 0 25px rgba(225,6,0,.5);
+}
+
+.owner-content h2{
+  font-size:34px;
+  color:#e10600;
+}
+.owner-content h3{
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+/* ===== CARDS ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:rgba(17,17,17,.85);
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 0 20px rgba(225,6,0,.25);
+  text-align:center;
+}
+
+/* ===== CTA ===== */
+.cta{
+  text-align:center;
+  background:linear-gradient(135deg,#e10600,#7a0000);
+  padding:55px 20px;
+  border-radius:22px;
+}
+.cta a{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 40px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:40px;
+  font-weight:600;
+}
+.cta a:hover{
+  background:#fff;
+  color:#e10600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#050505;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#aaa;
+}
+footer span{color:#e10600}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .owner-box{grid-template-columns:1fr;}
+  header{flex-direction:column; gap:15px;}
+  nav ul{flex-wrap:wrap; justify-content:center;}
+}
+@media(max-width:600px){
+  h1{font-size:32px;}
+  .logo span{font-size:20px;}
+}
+</style>
+</head>
+
+<body>
+<div class="page-bg">
+<div class="page-content">
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Veer The Muscle Academy">
+    <span>Veer The Muscle Academy</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="machines.html">Machines</a></li>
+      <li><a href="bmi.html">BMI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+<h1>About Veer The Muscle Academy</h1>
+
+<div class="section highlight">
+  <p><strong>Veer The Muscle Academy</strong> ek professional, result-oriented fitness academy hai
+  jahan training sirf workout nahi balki discipline aur consistency ka system hai.</p>
+  <p>Har member ko uske body type aur goal ke according structured, safe aur effective guidance di jaati hai.</p>
+</div>
+
+<div class="section owner-box">
+  <div class="owner-images">
+    <img src="veer-mishra-1.jpg">
+    <img src="veer-mishra-2.jpg">
+  </div>
+  <div class="owner-content">
+    <h2>Veer Mishra</h2>
+    <h3>Owner & Head Trainer</h3>
+    <p>Veer Mishra ek disciplined aur practical trainer hain jinka focus sirf physique nahi balki lifestyle change par hota hai.</p>
+    <p>Beginner ho ya advanced, har member ko proper form, safety aur long-term progress ke saath train kiya jaata hai.</p>
+    <p>Ye academy unki vision ka result hai — jahan fitness trend nahi, habit banti hai.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Philosophy</h2>
+  <ul>
+    <li>Discipline over motivation</li>
+    <li>Consistency over shortcuts</li>
+    <li>Long-term health focus</li>
+    <li>Realistic fitness goals</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">Fat Loss & Weight Management</div>
+    <div class="card">Strength & Muscle Training</div>
+    <div class="card">Cardio & Stamina Programs</div>
+    <div class="card">Beginner Friendly Workouts</div>
+    <div class="card">General Fitness Plans</div>
+    <div class="card">Lifestyle-Based Training</div>
+  </div>
+</div>
+
+<div class="section cta">
+  <h2>Fitness ek decision hai</h2>
+  <p>Visit kijiye, environment dekhiye aur khud difference feel kijiye.</p>
+  <a href="tel:8924817999">Call Now</a>
+</div>
+
+</div>
+
+<footer>
+  Results luck se nahi, <span>discipline aur routine</span> se milte hain.
+</footer>
+
+</div>
+</div>
+</body>
+</html>
