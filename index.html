@@ -1,39 +1,304 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Veer The Muscle Academy</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veer The Muscle Academy | Professional Gym</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+/* ===== BACKGROUND ===== */
+.hero-bg{
+  background:url("hero.jpg") center/cover no-repeat;
+  min-height:100vh;
+  position:relative;
+}
+.hero-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo img{height:65px}
+.logo span{
+  font-size:26px;
+  font-weight:700;
+  color:#e10600;
+  text-transform:uppercase;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:22px;
+}
+nav a{
+  text-decoration:none;
+  background:#e10600;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:500;
+  transition:.3s;
+}
+nav a:hover{
+  background:#fff;
+  color:#e10600;
+}
+
+/* ===== HERO ===== */
+.hero{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px 60px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:52px;
+  line-height:1.1;
+}
+.hero h1 span{
+  color:#e10600;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:1.15rem;
+  color:#ddd;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:18px;
+  margin-top:25px;
+}
+.hero-buttons a{
+  text-decoration:none;
+  padding:14px 30px;
+  border-radius:35px;
+  font-weight:600;
+}
+.btn-primary{
+  background:#e10600;
+  color:#fff;
+}
+.btn-outline{
+  border:2px solid #e10600;
+  color:#e10600;
+}
+.btn-outline:hover{
+  background:#e10600;
+  color:#fff;
+}
+
+/* ===== INFO STRIP ===== */
+.info-strip{
+  background:#0e0e0e;
+  padding:35px 20px;
+}
+.info-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.info-box{
+  text-align:center;
+}
+.info-box h3{
+  color:#e10600;
+  margin-bottom:8px;
+}
+.info-box p{color:#ccc}
+
+/* ===== WHY US ===== */
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+.section h2{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:40px;
+}
+.section h2 span{color:#e10600}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  background:#141414;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(225,6,0,.25);
+}
+.card h3{
+  color:#e10600;
+  margin-bottom:10px;
+}
+.card p{color:#ccc}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#050505;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#aaa;
+}
+footer span{color:#e10600}
+
+/* ===== MOBILE FIX ===== */
+@media(max-width:900px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:60px;
+  }
+  .hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .hero h1{
+    font-size:40px;
+  }
+}
+
+@media(max-width:500px){
+  .hero h1{font-size:32px}
+  .logo span{font-size:20px}
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-  <img src="logo.png">
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="machines.html">Machines</a>
-    <a href="bmi.html">BMI</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+<div class="hero-bg">
+<div class="hero-content">
 
-<div class="hero">
+<header>
+  <div class="logo">
+    <img src="logo.png">
+    <span>Veer The Muscle Academy</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="machines.html">Machines</a></li>
+      <li><a href="bmi.html">BMI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
   <div>
-    <h1>VEER THE MUSCLE ACADEMY</h1>
-    <p>Where Discipline Builds Strength 💪</p>
-    <p>Shastri Nagar, Sitapur • 5:00 AM – 10:00 PM</p>
-    <a href="contact.html" class="btn">Visit The Gym</a>
-  </div>
-</div>
-
-<section>
-  <h2 class="section-title">Why Choose Us</h2>
-  <div class="grid">
-    <div class="card">Professional Training System</div>
-    <div class="card">Beginner Friendly Environment</div>
-    <div class="card">Real & Sustainable Results</div>
+    <h1>Where <span>Discipline</span><br>Builds Strength</h1>
+    <p>
+      Veer The Muscle Academy is a result-oriented professional fitness academy
+      where training is not random exercise, but a structured system.
+      Open for all age groups with complete guidance and discipline.
+    </p>
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn-primary">Join Now</a>
+      <a href="about.html" class="btn-outline">Know More</a>
+    </div>
   </div>
 </section>
+
+</div>
+</div>
+
+<section class="info-strip">
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>📍 Location</h3>
+      <p>Shastri Nagar, Sitapur</p>
+    </div>
+    <div class="info-box">
+      <h3>🕔 Timings</h3>
+      <p>5:00 AM – 10:00 PM</p>
+    </div>
+    <div class="info-box">
+      <h3>🏋️ Result Oriented</h3>
+      <p>System-based training</p>
+    </div>
+    <div class="info-box">
+      <h3>📞 Contact</h3>
+      <p>89248 17999</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why <span>Choose Us</span></h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Professional Guidance</h3>
+      <p>Every member trains with proper form, discipline and guidance.</p>
+    </div>
+    <div class="card">
+      <h3>Structured System</h3>
+      <p>No random workouts. Proper routines designed for results.</p>
+    </div>
+    <div class="card">
+      <h3>All Age Groups</h3>
+      <p>Beginners, athletes, weight loss & strength training.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+© 2026 <span>Veer The Muscle Academy</span> — Discipline Builds Strength 💪
+</footer>
 
 </body>
 </html>
